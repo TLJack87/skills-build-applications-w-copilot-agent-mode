@@ -1,17 +1,27 @@
 :root {
   font-family: 'Avenir Next', 'Segoe UI', sans-serif;
-  color: #24312d;
-  background: #f6f8f6;
+  color: #1b302a;
+  background: #f3f6f1;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 #root {

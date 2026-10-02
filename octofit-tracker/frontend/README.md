@@ -30,3 +30,9 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+## API URL configuration
+
+For a Codespaces-hosted production build, define `VITE_CODESPACE_NAME` in `octofit-tracker/frontend/.env.local` using your Codespace name (without the port). Vite exposes the value through `import.meta.env.VITE_CODESPACE_NAME`, and the app builds the API URL as `https://<codespace-name>-8000.app.github.dev`.
+
+If `VITE_CODESPACE_NAME` is unset, the API falls back to `http://localhost:8000`. During local Vite development, `/api` requests are proxied to that localhost API.
